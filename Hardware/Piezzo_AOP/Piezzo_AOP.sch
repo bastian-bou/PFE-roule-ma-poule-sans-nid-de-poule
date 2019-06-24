@@ -1,0 +1,153 @@
+EESchema Schematic File Version 4
+LIBS:Piezzo_AOP-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "2019-01-06"
+Rev "A"
+Comp "SES NOUVELLE & POLYTECH - Bastian BOUCHARDON"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 5750 3800 2    50   Output ~ 0
+GPIO_ESP32
+$Comp
+L Device:Microphone MK1
+U 1 1 5C32023F
+P 3600 4350
+F 0 "MK1" H 3730 4396 50  0000 L CNN
+F 1 "Piezzo sensor" H 3730 4305 50  0000 L CNN
+F 2 "" V 3600 4450 50  0001 C CNN
+F 3 "~" V 3600 4450 50  0001 C CNN
+	1    3600 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5C3203E8
+P 4400 4350
+F 0 "R2" H 4470 4396 50  0000 L CNN
+F 1 "1M" H 4470 4305 50  0000 L CNN
+F 2 "" V 4330 4350 50  0001 C CNN
+F 3 "~" H 4400 4350 50  0001 C CNN
+	1    4400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5C320612
+P 4600 4700
+F 0 "#PWR04" H 4600 4450 50  0001 C CNN
+F 1 "GND" H 4605 4527 50  0000 C CNN
+F 2 "" H 4600 4700 50  0001 C CNN
+F 3 "" H 4600 4700 50  0001 C CNN
+	1    4600 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D D1
+U 1 1 5C37C500
+P 4150 4100
+F 0 "D1" H 4150 3884 50  0000 C CNN
+F 1 "1N4148" H 4150 3975 50  0000 C CNN
+F 2 "" H 4150 4100 50  0001 C CNN
+F 3 "~" H 4150 4100 50  0001 C CNN
+	1    4150 4100
+	-1   0    0    1   
+$EndComp
+$Comp
+L Transistor_FET:2N7000 Q1
+U 1 1 5C37C5A2
+P 5250 4100
+F 0 "Q1" H 5455 4146 50  0000 L CNN
+F 1 "2N7000" H 5455 4055 50  0000 L CNN
+F 2 "Package_TO_SOT_THT:TO-92_Inline" H 5450 4025 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/2N/2N7000.pdf" H 5250 4100 50  0001 L CNN
+	1    5250 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 4300 5350 4600
+$Comp
+L power:VCC #PWR01
+U 1 1 5C37C8F5
+P 5350 3300
+F 0 "#PWR01" H 5350 3150 50  0001 C CNN
+F 1 "VCC" H 5367 3473 50  0000 C CNN
+F 2 "" H 5350 3300 50  0001 C CNN
+F 3 "" H 5350 3300 50  0001 C CNN
+	1    5350 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5C37C759
+P 5350 3550
+F 0 "R1" H 5420 3596 50  0000 L CNN
+F 1 "470K" H 5420 3505 50  0000 L CNN
+F 2 "" V 5280 3550 50  0001 C CNN
+F 3 "~" H 5350 3550 50  0001 C CNN
+	1    5350 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3300 5350 3400
+Wire Wire Line
+	5350 3700 5350 3800
+Wire Wire Line
+	5350 3800 5750 3800
+Connection ~ 5350 3800
+Wire Wire Line
+	5350 3800 5350 3900
+$Comp
+L Device:C C1
+U 1 1 5C37CDC3
+P 4800 4350
+F 0 "C1" H 4915 4396 50  0000 L CNN
+F 1 "100nF" H 4915 4305 50  0000 L CNN
+F 2 "" H 4838 4200 50  0001 C CNN
+F 3 "~" H 4800 4350 50  0001 C CNN
+	1    4800 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 4150 3600 4100
+Wire Wire Line
+	3600 4100 4000 4100
+Wire Wire Line
+	3600 4550 3600 4600
+Wire Wire Line
+	3600 4600 4400 4600
+Wire Wire Line
+	4600 4600 4600 4700
+Wire Wire Line
+	4400 4500 4400 4600
+Connection ~ 4400 4600
+Wire Wire Line
+	4400 4600 4600 4600
+Wire Wire Line
+	4600 4600 4800 4600
+Connection ~ 4600 4600
+Wire Wire Line
+	4800 4500 4800 4600
+Connection ~ 4800 4600
+Wire Wire Line
+	4800 4600 5350 4600
+Wire Wire Line
+	4400 4200 4400 4100
+Wire Wire Line
+	4400 4100 4300 4100
+Wire Wire Line
+	4400 4100 4800 4100
+Connection ~ 4400 4100
+Wire Wire Line
+	4800 4200 4800 4100
+Connection ~ 4800 4100
+Wire Wire Line
+	4800 4100 5050 4100
+$EndSCHEMATC

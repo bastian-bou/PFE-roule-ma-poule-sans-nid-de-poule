@@ -1,0 +1,12 @@
+image: python:2.7
+
+stages:
+ - test
+
+before_script:
+  - "pip install -U platformio"
+
+Debug_test:
+  stage: test
+  script: "platformio ci "
+  variables: {PLATFORMIO_CI_SRC: “test/test_debug.cpp”}
